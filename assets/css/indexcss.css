@@ -1,0 +1,345 @@
+body {
+  font-family: "Prompt", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #7c4aaf 100%);
+  padding: 20px;
+}
+
+.container-custom {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+}
+
+#header1 {
+  background: linear-gradient(90deg, #a78bfa, #7b5cf7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#header2 {
+  color: #ffb3ff;
+}
+
+#para1 {
+  color: #cfe2ff;
+}
+
+.status {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.btn-save {
+  background-color: #38a6f4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-save:hover {
+  background-color: #5199cd;
+}
+
+.btn-add {
+  background-color: #32f44c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-add:hover {
+  background-color: #2fd255;
+  color: white;
+}
+
+.datetime-box {
+  font-size: 1.2rem;
+  color: #cfe2ff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.summary-container {
+  background: #f2f2f2;
+  color: #000000;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.summary-container:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+#summaryList div {
+  background: #d4d4d4;
+  color: #000000;
+  border-radius: 10px;
+  padding: 12px 20px;
+  min-width: 130px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+}
+
+#headerone {
+  color: #ffb3ff;
+}
+
+#footer {
+  color: #f1f1f1;
+}
+
+.table-responsive {
+  margin-top: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(100, 80, 180, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* หัวตาราง */
+.table thead {
+  background: linear-gradient(90deg, #a78bfa, #9d7bf7);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+/* เส้นขอบตาราง */
+.table-bordered {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ช่องข้อมูลในตาราง */
+.table td,
+.table th {
+  vertical-align: middle;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* แถวสลับสีเล็กน้อยให้อ่านง่าย */
+.table tbody tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Hover effect */
+.table tbody tr:hover td {
+  background: rgba(167, 139, 250, 0.2);
+  color: #0c0c0c;
+  transition: 0.25s ease;
+}
+
+/* Hamburger Button */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1051;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #c0eaff;
+  transition: 0.4s;
+}
+
+/* แปลงเป็นกากบาทตอนเปิด */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 7px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -7.5px);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  transition: 0.4s;
+  z-index: 1050;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(80px);
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1049;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(90deg, #a78bfa, #7b5cf7);
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(90deg, #7b5cf7, #9f7aea);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(155, 100, 255, 0.5);
+  transition: all 0.3s ease;
+  display: none;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #9f7aea, #7b5cf7);
+}
+
+#stopAlarmBtn {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+
+#stopAlarmBtn:hover {
+  background: linear-gradient(90deg, #7b5cf7, #9a73e8);
+  transform: scale(1.05);
+}
+
+/* -------------Keyframes------------- */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.dots-wave {
+  display: flex;
+  gap: 10px;
+}
+
+.dots-wave span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #a78bfa;
+  border-radius: 0;
+  animation: wave 1.2s infinite;
+}
+
+.dots-wave span:nth-child(1) {
+  animation-delay: 0s;
+}
+.dots-wave span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dots-wave span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.dots-wave span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.dots-wave span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  30% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+}

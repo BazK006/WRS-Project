@@ -1,0 +1,12 @@
+{
+  //--- เปิด Port ให้เครื่องอื่นเข้าได้ --//
+  //"liveServer.settings.host": "0.0.0.0",
+  "liveServer.settings.port": 0,
+
+  // Auto save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000, // ตั้งเวลาเปลี่ยนแปลง 0.1s
+
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true
+}

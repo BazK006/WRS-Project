@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WorkSetRep Tracker | เว็บติดตามการยกเวทของคุณ วิเคราะห์เซตและเรป เพื่อพัฒนาให้แข็งแกร่งขึ้นทุกวัน!">
+    <meta name="keywords" content="workout, fitness, gym, tracker, weightlifting, workout log, muscle, ยกเวท, ฟิตเนส">
+    <meta name="author" content="Kasemsak">
+    <title>About | WorkSetRep</title>
+
+    <link rel="icon" type="image/x-icon" href="photo/iconfiness.ico">
+
+    <meta property="og:title" content="💪 WorkSetRep Tracker">
+    <meta property="og:description"
+        content="🏋️‍♂️ เว็บติดตามการยกเวทของคุณ วิเคราะห์เซตและเรป เพื่อพัฒนาให้แข็งแกร่งขึ้นทุกวัน!">
+    <meta property="og:image" content="https://worksetrep.com/photo/weightlifter-banner.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worksetrep.com">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="💪 WorkSetRep Tracker">
+    <meta name="twitter:description" content="🏋️‍♂️ ระบบติดตามการฝึกยกเวทอย่างมืออาชีพ">
+    <meta name="twitter:image" content="https://worksetrep.com/photo/weightlifter-banner.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/aboutcss.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- Keyframes-->
+    <div class="spinner-overlay" id="spinnerOverlay">
+        <div class="dots-wave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- ปุ่ม Hamburger -->
+    <button class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar pt-5" id="sidebar">
+        <a href="index.html" class="d-block p-3 text-white text-decoration-none">About</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='wsr.html'>WSR Tracker</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='timer.html'>Timer</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='plans.html'>Workout Planner</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='https://forms.gle/LM7UEGC5PDUtboRK9'>Quiz</a>
+    </div>
+
+    <!-- Overlay มืดด้านหลัง -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background: rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <a class="navbar-brand mx-auto fw-bold text-gradient" href="about.html">🏋️ WorkSetRep Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section: About -->
+    <section id="about" class="container my-5 text-light">
+        <div class="row justify-content-center align-items-center">
+
+            <!-- คอลัมน์ซ้าย -->
+            <div class="col-lg-7 col-md-10">
+                <h2 class="fw-bold mb-4 text-gradient">เกี่ยวกับโปรแกรม WorkSetRep Tracker</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    โปรแกรม <strong>WorkSetRep Tracker</strong> ถูกสร้างขึ้นเพื่อช่วยให้ผู้ที่ออกกำลังกายทุกระดับ
+                    สามารถติดตามและบันทึกผลการฝึกของตนเองได้อย่างมีประสิทธิภาพ ทั้งชื่อท่า จำนวนเซต (Set)
+                    และจำนวนครั้ง (Rep) ของแต่ละท่า โดยเน้นความง่ายในการใช้งานและความสวยงามในทุกอุปกรณ์
+                </p>
+
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    จุดมุ่งหมายของโปรแกรมนี้ คือการช่วยให้ผู้ใช้เห็นภาพรวมของพัฒนาการในแต่ละวันได้ชัดเจน
+                    ด้วยระบบสรุปผลอัตโนมัติ และการบันทึกข้อมูลแบบเรียลไทม์ ทำให้ไม่ต้องกังวลเรื่องข้อมูลสูญหายอีกต่อไป
+                </p>
+
+                <h4 class="mt-4 text-gradient">ฟีเจอร์เด่นของ WorkSetRep Tracker</h4>
+                <ul style="font-size: 1.05rem; line-height: 1.8;">
+                    <li>📋 เพิ่ม/แก้ไข/ลบ ข้อมูลการฝึกได้อย่างง่ายดาย</li>
+                    <li>💾 บันทึกข้อมูลอัตโนมัติทันทีหลังแก้ไข</li>
+                    <li>📈 แสดงผลรวมของ จำนวนเซ็ต(Set) / จำนวนครั้ง(Rep)</li>
+                    <li>🕒 แสดงวันและเวลาปัจจุบันให้ไม่พลาดการบันทึก</li>
+                    <li>🎨 โทนสีม่วง-ดำ ให้ความรู้สึกทันสมัยและเท่</li>
+                    <li>📱 รองรับทุกอุปกรณ์ ทั้งคอมพิวเตอร์ แท็บเล็ต และมือถือ</li>
+                    <li>📅 มีฟังก์ชันวางแผนการออกกำลังกาย บันทึกตารางฝึก และรีเซ็ตข้อมูลได้ง่าย ใช้งานสะดวกในทุกอุปกรณ์
+                    </li>
+                </ul>
+
+                <p class="mt-4" style="font-size: 1.1rem; line-height: 1.8;">
+                    โปรแกรมนี้ถูกพัฒนาโดยมีแรงบันดาลใจจากคนที่อยากเห็นพัฒนาการของตัวเอง
+                    ไม่ว่าจะเป็นการยกเวท วิ่ง หรือเล่นฟิตเนส ทุกกิจกรรมควรถูกบันทึกไว้เป็น “เรื่องราวของความพยายาม”
+                    และ WorkSetRep Tracker จะเป็นเพื่อนคู่ใจในการเดินทางสายฟิตนี้ 💪
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-8 col-10 text-center mt-4 mt-lg-0"></div>
+
+        </div>
+
+        <div class="container my-5 px-3">
+            <div class="card border-0 mx-auto bg-transparent"
+                style="max-width: 1100px; backdrop-filter: blur(10px); border-radius: 15px;">
+                <div class="card-body text-center p-4">
+                    <h3 class="fw-bold mb-3 text-light fs-4 fs-md-3">หมายเหตุ:</h3>
+                    <p class="mb-0 text-light lh-lg fs-6 fs-md-5">
+                        เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการพัฒนาเว็บด้านการวางแผนการออกกำลังกาย
+                        และเพื่อเพิ่มพูนทักษะการออกแบบและการเขียนโปรแกรมในเชิงปฏิบัติ
+                        โดยผู้พัฒนาได้ออกแบบและสร้างขึ้นเพื่อฝึกฝนทักษะ
+                        เพื่อใช้เป็นพื้นที่ทดลองและเรียนรู้แนวทางการสร้างเว็บในรูปแบบต่าง ๆ
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- ปุ่มกลับขึ้นด้านบน -->
+    <button id="backToTop">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mt-3">© 2025 WorkSetRep Tracker | By Kasemsak </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ปุ่มกลับขึ้นบน
+        const btn = document.getElementById('backToTop');
+        window.onscroll = () => {
+            if (document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // ปุ่มสามขีด hamburger //
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        // Spinner loader
+        window.addEventListener("load", () => {
+            const spinnerOverlay = document.getElementById("spinnerOverlay");
+            setTimeout(() => {
+                spinnerOverlay.style.display = "none";
+            }, 400); // หมุน 1.5 วินาทีแล้วหาย
+        });
+    </script>
+</body>
+
+</html>

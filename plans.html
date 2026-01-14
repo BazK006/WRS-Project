@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Planner | WorkSetRep</title>
+    <link rel="icon" type="image/x-icon" href="photo/iconfiness.ico">
+
+    <meta property="og:title" content="💪 WorkSetRep Tracker">
+    <meta property="og:description"
+        content="🏋️‍♂️ เว็บติดตามการยกเวทของคุณ วิเคราะห์เซตและเรป เพื่อพัฒนาให้แข็งแกร่งขึ้นทุกวัน!">
+    <meta property="og:image" content="https://worksetrep.com/photo/weightlifter-banner.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worksetrep.com">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="💪 WorkSetRep Tracker">
+    <meta name="twitter:description" content="🏋️‍♂️ ระบบติดตามการฝึกยกเวทอย่างมืออาชีพ">
+    <meta name="twitter:image" content="https://worksetrep.com/photo/weightlifter-banner.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Css-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/plancss.css">
+</head>
+
+<body>
+    <!-- Keyframes-->
+    <div class="spinner-overlay" id="spinnerOverlay">
+        <div class="dots-wave">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- ปุ่ม Hamburger -->
+    <button class="hamburger" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar pt-5" id="sidebar">
+        <a href="index.html" class="d-block p-3 text-white text-decoration-none">About</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='wsr.html'>WSR Tracker</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='timer.html'>Timer</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='plans.html'>Workout Planner</a>
+        <a class='d-block p-3 text-white text-decoration-none' href='https://forms.gle/LM7UEGC5PDUtboRK9'>Quiz</a>
+    </div>
+
+    <!-- Overlay มืดด้านหลัง -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="header">
+        <h1>Workout Planner</h1>
+        <h2>วางแผนการออกกำลังกายของคุณ</h2>
+        <p>เพิ่มกิจกรรมในแต่ละวันได้ไม่จำกัดและบันทึกข้อมูลของคุณเพื่อไม่ให้พลาดข้อมูลสำคัญ</p>
+    </div>
+
+    <div class="container text-center">
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">จันทร์</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">อังคาร</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">พุธ</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">พฤหัส</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">ศุกร์</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">เสาร์</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl">
+                <div class="day-column">
+                    <div class="day-header">อาทิตย์</div>
+                    <div class="activities"></div>
+                    <button class="btn btn-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-4">
+            <div class="row justify-content-center g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <button class="btn btn-save w-100">
+                        <i class="fas fa-save"></i> บันทึกตาราง
+                    </button>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <button class="btn btn-reset w-100">
+                        <i class="fas fa-undo-alt"></i> รีเซ็ตทั้งหมด
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="usage-guide text-center p-4 rounded-4">
+            <h3 class="mb-3">วิธีใช้โปรแกรม Workout Planner</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="guide-box p-3 h-100">
+                        <h5>1. เพิ่มกิจกรรม</h5>
+                        <p>พิมพ์ชื่อท่าออกกำลังกาย พร้อมจำนวนเซต (Set) และจำนวนครั้ง (Rep) จากนั้นกดปุ่ม
+                            <strong>"+"</strong> เพื่อเพิ่มข้อมูลและ อย่าลืมกดปุ่ม <strong>"บันทึกตาราง"</strong>
+                            หลังจากเพิ่มข้อมูลเสร็จ
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="guide-box p-3 h-100">
+                        <h5>2. บันทึกตาราง</h5>
+                        <p>กดปุ่ม <strong>“บันทึกตาราง”</strong> เพื่อเก็บข้อมูลไว้ในระบบ สามารถกลับมาเปิดดูภายหลังได้
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="guide-box p-3 h-100">
+                        <h5>3. รีเซ็ตข้อมูล</h5>
+                        <p>หากต้องการเริ่มต้นใหม่ กด <strong>“รีเซ็ตทั้งหมด”</strong> ระบบจะล้างข้อมูลทั้งหมดทันที</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- แจ้งเตือน -->
+    <div id="toast" class="toast-message"></div>
+
+    <div class="box1" style="height: 200px;"></div>
+
+    <hr>
+    <footer>© 2025 WorkSetRep Tracker | By Kasemsak</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dayColumns = document.querySelectorAll(".day-column");
+            const saveBtn = document.querySelector(".btn-save");
+
+            // โหลดข้อมูลจาก localStorage
+            const saved = JSON.parse(localStorage.getItem("weeklyActivities")) || {};
+
+            dayColumns.forEach((column) => {
+                const day = column.querySelector(".day-header").textContent;
+                const activityContainer = column.querySelector(".activities");
+                const addBtn = column.querySelector(".btn-add");
+
+                // ถ้ามีข้อมูลเก่า → แสดงออกมา
+                if (saved[day]) {
+                    saved[day].forEach((text) => {
+                        createActivity(activityContainer, text);
+                    });
+                }
+
+                // ปุ่มเพิ่มกิจกรรม
+                addBtn.addEventListener("click", () => {
+                    const text = prompt(`เพิ่มกิจกรรมสำหรับวัน${day}:`);
+                    if (text && text.trim() !== "") {
+                        createActivity(activityContainer, text);
+                        saveData();
+                    }
+                });
+            });
+
+            // ปุ่มบันทึก
+            saveBtn.addEventListener("click", () => {
+                saveData();
+                showToast("✅ บันทึกเรียบร้อย!", "linear-gradient(135deg, #00e676, #00b248)");
+
+                saveBtn.innerHTML = "✅ บันทึกแล้ว!";
+                saveBtn.style.background = "linear-gradient(135deg, #00e676, #00b248)";
+                setTimeout(() => {
+                    saveBtn.innerHTML = '<i class="fas fa-save"></i> บันทึกตาราง';
+                    saveBtn.style.background = "linear-gradient(135deg, #00c853, #007a33)";
+                }, 2000);
+            });
+
+            // ปุ่มรีเซ็ตทั้งหมด
+            const resetBtn = document.querySelector(".btn-reset");
+
+            resetBtn.addEventListener("click", () => {
+                const confirmReset = confirm("⚠️ ต้องการรีเซ็ตข้อมูลทั้งหมดหรือไม่?");
+                if (confirmReset) {
+                    localStorage.removeItem("weeklyActivities");
+                    document.querySelectorAll(".activities").forEach((container) => {
+                        container.innerHTML = "";
+                    });
+
+                    showToast("รีเซ็ตเรียบร้อย!", "linear-gradient(135deg, #ffb300, #ff6f00)");
+
+                    resetBtn.innerHTML = "✅ รีเซ็ตเรียบร้อย!";
+                    resetBtn.style.background = "linear-gradient(135deg, #ffca28, #ff8f00)";
+                    setTimeout(() => {
+                        resetBtn.innerHTML = '<i class="fas fa-undo-alt"></i> รีเซ็ตทั้งหมด';
+                        resetBtn.style.background = "linear-gradient(135deg, #ffb300, #ff6f00)";
+                    }, 2000);
+                }
+            });
+
+            // ฟังก์ชัน Toast เด้งลงจากด้านบน
+            function showToast(message, color) {
+                const toast = document.getElementById("toast");
+                toast.textContent = message;
+                toast.style.background = color;
+                toast.classList.add("toast-show");
+
+                // ซ่อนภายใน 2.5 วินาที
+                setTimeout(() => {
+                    toast.classList.remove("toast-show");
+                }, 2500);
+            }
+
+
+            // ฟังก์ชันสร้างกิจกรรมใหม่
+            function createActivity(container, text) {
+                const item = document.createElement("div");
+                item.className = "activity-item";
+                item.innerHTML = `
+      <span>${text}</span>
+      <button class="btn btn-sm btn-outline-danger rounded-circle"><i class="fas fa-trash"></i></button>
+    `;
+
+                // ลบกิจกรรม
+                item.querySelector("button").addEventListener("click", () => {
+                    item.remove();
+                    saveData();
+                });
+
+                container.appendChild(item);
+            }
+
+            // ฟังก์ชันบันทึกลง localStorage
+            function saveData() {
+                const data = {};
+                dayColumns.forEach((column) => {
+                    const day = column.querySelector(".day-header").textContent;
+                    const items = [...column.querySelectorAll(".activity-item span")].map(
+                        (el) => el.textContent
+                    );
+                    data[day] = items;
+                });
+                localStorage.setItem("weeklyActivities", JSON.stringify(data));
+            }
+        });
+
+        // ----------------ปุ่มสามขีด hamburger---------------- //
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        // Spinner loader
+        window.addEventListener("load", () => {
+            const spinnerOverlay = document.getElementById("spinnerOverlay");
+            setTimeout(() => {
+                spinnerOverlay.style.display = "none";
+            }, 400); // หมุน 1.5 วินาทีแล้วหาย
+        });
+    </script>
+</body>
+
+</html>
