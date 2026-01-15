@@ -14,7 +14,7 @@ body {
 }
 
 #header1 {
-  background: linear-gradient(90deg, #a78bfa, #7b5cf7);
+  background: linear-gradient(90deg, #cab8ff, #bfaffd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -81,6 +81,17 @@ body {
 }
 
 .btn-add:hover {
+  background-color: #2fd255;
+  color: white;
+}
+
+#saveallbtn {
+  background-color: #32f44c;
+  color: white;
+  border: none;
+}
+
+#saveallbtn:hover {
   background-color: #2fd255;
   color: white;
 }
